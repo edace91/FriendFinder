@@ -1,0 +1,33 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "full-stack site will take in results your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edace91/FriendFinder.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "API",
+    "NPM",
+    "server",
+    "javascript"
+  ],
+  "author": "Eduardo Aceves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edace91/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/edace91/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}
