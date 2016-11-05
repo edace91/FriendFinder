@@ -8,8 +8,9 @@ var friendsData	= require('../data/friends.js');
 
 // ROUTING
 /* A POST routes /api/friends. 
-This will handle incoming survey results. 
-used to handle the compatibility logic. */
+This will be used to handle incoming survey results. 
+This route will also be used to handle 
+the compatibility logic. */
 
 module.exports = function (app) {
 // =============================================================
@@ -18,13 +19,13 @@ module.exports = function (app) {
 	app.get('/api/friends', function (req, res) {
 		res.json(friendsData);
 	});
-	// Note the code here. Our "server" will respond to requests and 
-		// let users know if they have a match or not.
-		/* It will do this by sending out the value "true" 
-		var newFriend = req.body;\\
+
 // ======================================
 	app.post('/api/friends', function (req, res) {
-		
+		// Note the code here. Our "server" will respond to requests and 
+		// let users know if they have a match or not.
+		/* It will do this by sending out the value "true" 
+		var newFriend = req.body;
 		newFriend.name = newFriend.name.replace(/\s+/g, '').toLowerCase();
 
 		console.log(newFriend);
@@ -37,8 +38,8 @@ module.exports = function (app) {
 	//Convert each user's results into a simple array of numbers
  	//(ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
 
-	var userInput = friendsArray.scores.split(" ");
-	for(var i=0; i<userInput.length; i++) { userInput[i] = +userInput[i]; } 
+	//var userInput = friendsArray.scores.split(" ");
+	//for(var i=0; i<userInput.length; i++) { userInput[i] = +userInput[i]; } 
 
 		
 
@@ -56,8 +57,6 @@ module.exports = function (app) {
 		var userScores 	= userData.scores;
 		//Remember to use the absolute value of the differences.
 		var totalDifference = 0;
-
-		cisole.log (userData)
 
 		/*compare the difference between current user's scores against those from other users, 
 			question by question. loop through the friends data array of objects to get each friendsData scores*/
@@ -83,11 +82,9 @@ module.exports = function (app) {
 				}
 			}
 		}
-
 		/*Once you've found the current user's most compatible friend,
  			display the result as a modal pop-up.*/
 		friendsData.push(userData);
-
  		/* The modal should display both the name and picture of the closest match.*/
 		res.json(friendMatch);
 	});
