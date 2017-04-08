@@ -4,7 +4,7 @@
 // 
 
 var friendsData	= require('../data/friends.js');
-
+var  paths = require("paths");
 
 // ROUTING
 /* A POST routes /api/friends. 
@@ -41,8 +41,7 @@ module.exports = function (app) {
 	//var userInput = friendsArray.scores.split(" ");
 	//for(var i=0; i<userInput.length; i++) { userInput[i] = +userInput[i]; } 
 
-		
-
+	
 	//create an object for the friend match
 		var friendMatch = {
 			name: "",
